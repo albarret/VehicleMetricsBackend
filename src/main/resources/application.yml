@@ -1,0 +1,16 @@
+
+spring:
+  datasource:
+    password: Mobi7teste
+    url: jdbc:mysql://localhost:3306/mobi7
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format-sql: true
+    show-sql: true
+server:
+  port: 3001
