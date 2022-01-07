@@ -29,4 +29,4 @@ Além disso, dentro da pasta SQL Objects deste repositório, existem 3 scripts s
 
 O cálculo do tempo de permanência foi feito diretamente no banco de dados, por praticidade. Ele está localizado na view `tempo_permanencia`. Além disso, o cálculo
 das distâncias também foi feito diretamente na montagem da view e é o critério para a junção das duas tabelas fornecidas: `posicao` e `point_of_interest`. A fórmula usada para o cálculo
-é a fórmular de Haversine. Apenas funções nativas do MySQL foram utilizadas nessa query.
+é a fórmula de Haversine. Apenas funções nativas do MySQL foram utilizadas nessa query.
