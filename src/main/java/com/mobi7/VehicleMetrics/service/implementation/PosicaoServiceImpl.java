@@ -1,6 +1,7 @@
 package com.mobi7.VehicleMetrics.service.implementation;
 
 import com.mobi7.VehicleMetrics.model.Posicao;
+import com.mobi7.VehicleMetrics.model.dto.DaysDTO;
 import com.mobi7.VehicleMetrics.repository.PosicaoRepository;
 import com.mobi7.VehicleMetrics.service.PosicaoService;
 import lombok.RequiredArgsConstructor;
@@ -35,5 +36,10 @@ public class PosicaoServiceImpl implements PosicaoService {
     @Override
     public List<Posicao> findToSelect() {
         return posicaoRepository.findToSelect();
+    }
+
+    @Override
+    public DaysDTO findAvailableDays() {
+        return posicaoRepository.findAvailableDays();
     }
 }

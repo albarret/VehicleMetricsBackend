@@ -1,6 +1,7 @@
 package com.mobi7.VehicleMetrics.controllers;
 
 import com.mobi7.VehicleMetrics.model.Posicao;
+import com.mobi7.VehicleMetrics.model.dto.DaysDTO;
 import com.mobi7.VehicleMetrics.service.PosicaoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +33,12 @@ public class PosicaoController {
     @PostMapping("/findByVehicle")
     public ResponseEntity<List<Posicao>> findByVehicle(@RequestBody @Valid String placaVeiculo) {
         List<Posicao> result = posicaoService.findByVehicle(placaVeiculo);
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping("/daysAvailable")
+    public ResponseEntity<DaysDTO> findAvailableDays() {
+        DaysDTO result = posicaoService.findAvailableDays();
         return ResponseEntity.ok(result);
     }
 }
